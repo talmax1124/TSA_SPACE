@@ -8,7 +8,6 @@
     <!-- smooth scrolling -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
     <!-- NetlifyCMS -->
 
     <!-- <link
@@ -67,35 +66,37 @@
     />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+            // Store hash
+            var hash = this.hash;
 
-      // Store hash
-      var hash = this.hash;
+            let offsett = $(hash).offset().top;
+            offsett = offsett + 10;
 
-      let offsett = $(hash).offset().top
-      offsett = offsett + 10
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: offsett
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: offsett,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
       });
-    } // End if
-  });
-});
-</script>
+    </script>
 
     <!-- Netlify CMS -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -123,15 +124,13 @@ $(document).ready(function(){
       defer
     ></script>
 
- 
-
     <title>{{ title }}</title>
   </head>
 
   <body>
-    {% include './components/header.njk' %}
-    <div class="headerseperator"></div>
-    <main> 
+    <!-- {% include './components/header.njk' %} -->
+    <!-- <div class="headerseperator"></div> -->
+    <main>
       {{ content | safe }}
     </main>
     {% include './components/footer.njk' %}
@@ -139,10 +138,10 @@ $(document).ready(function(){
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-   AOS.init()
+    AOS.init();
   </script>
-   <link
-   rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
- />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </html>
