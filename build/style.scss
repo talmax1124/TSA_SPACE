@@ -73,6 +73,11 @@ body {
   }
 }
 
+.about-sec-head {
+  font-size: 4em;
+  margin: .5em 0 .5em 0;
+}
+
 @media (max-width: 1000px) {
   .section-styling {
     padding: 1.2em;
@@ -83,6 +88,10 @@ body {
   .hero {
     background-size: cover;
     background-position: center center;
+
+    h1 {
+      font-size: 3.5em;
+    }
   }
 
   .header {
