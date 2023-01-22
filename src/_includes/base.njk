@@ -128,8 +128,14 @@
   </head>
 
   <body>
-    <!-- {% include './components/header.njk' %} -->
-    <!-- <div class="headerseperator"></div> -->
+    <div class="hero flex flex-col">
+      {% include "./components/header.njk" %}
+
+      <center>
+        <h1 class="font-bold text-3xl uppercase">{{ title }}</h1>
+      </center>
+    </div>
+
     <main>
       {{ content | safe }}
     </main>
