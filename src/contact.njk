@@ -1,4 +1,32 @@
 ---
-title: Contact
+title: Contact Us
 layout: "base.njk"
 ---
+
+<div class="hero flex flex-col">
+  {% include "./_includes/components/header.njk" %}
+
+  <center>
+    <h1 class="font-bold text-3xl uppercase">Contact Us</h1>
+    <h2 class="font-bold text-3xl uppercase relative -inset-y-20">
+      We're more than just a website
+    </h2>
+    <h2 class="text-3xl relative -inset-y-20">Feel free to contact us!</h2>
+    <div class="flex space-x-2 justify-center relative -inset-y-12">
+      <button
+        type="button"
+        class="inline-block px-6 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase rounded shadow-md border-2 border-indigo-400 hover:border-white hover:bg-indigo-200 hover:shadow-lg focus:bg-indigo-200 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-white active:shadow-lg transition duration-150 ease-in-out"
+      >
+        Connect
+      </button>
+    </div>
+    <div>
+      <h2 class="font-bold text-3xl relative">
+        Let's talk! Share your thoughts with us!
+      </h2>
+      <h2 class="text-3xl relative underline underline-offset-3">
+        staff@fut3r3.com
+      </h2>
+    </div>
+  </center>
+</div>
