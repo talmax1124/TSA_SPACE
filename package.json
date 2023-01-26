@@ -4,6 +4,8 @@
   "description": "Website.",
   "main": "index.js",
   "scripts": {
+    "dev:sass": "npx sass build/style.scss build/style.css --no-source-map --watch",
+    "build:sass": "npx sass build/style.scss build/style.css --no-source-map",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:eleventy": "npx eleventy --serve",
     "dev:tailwind": "npx tailwindcss -i build/tailwind.css -c build/tailwind.config.js -o site/style.css --watch --no-map",
@@ -45,6 +47,7 @@
     "netlify-cms-widget-inline-select": "^1.2.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^8.3.1",
+    "sass": "^1.57.1",
     "sharp": "^0.29.3",
     "slick-carousel": "^1.8.1",
     "watch": "^0.13.0"
