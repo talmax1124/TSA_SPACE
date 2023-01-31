@@ -47,6 +47,7 @@
     "netlify-cms-widget-inline-select": "^1.2.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^8.3.1",
+    "rellax": "^1.12.1",
     "sass": "^1.57.1",
     "sharp": "^0.29.3",
     "slick-carousel": "^1.8.1",
