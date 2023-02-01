@@ -138,6 +138,11 @@
   <script>
     AOS.init();
   </script>
+  <script>
+    const year = new Date().getFullYear();
+    const yearContainer = document.getElementById("current-year");
+    yearContainer.innerHTML = year;
+  </script>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"

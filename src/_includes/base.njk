@@ -144,6 +144,11 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
+    const year = new Date().getFullYear();
+    const yearContainer = document.getElementById("current-year");
+    yearContainer.innerHTML = year;
+  </script>
+  <script>
     AOS.init();
   </script>
   <link
