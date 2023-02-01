@@ -377,6 +377,45 @@ body {
   margin: 1.5em 0 1.5em 0;
 }
 
+.about-cont h1 {
+  font-size: 3em;
+  margin: 0.5em 0 0.5em 0;
+  font-weight: bold;
+}
+.about-cont p {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.5em 0;
+}
+.about-cont ul {
+  list-style: none;
+  margin-top: 0.5em;
+}
+.about-cont ul li {
+  font-size: 1.7em;
+  margin-bottom: 0.5em;
+}
+
+.about-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.648), rgba(0, 0, 0, 0.648)), url("https://images.unsplash.com/photo-1586999082731-574a06ec7e25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
+  background-position: center center;
+  background-size: cover;
+  height: 70vh;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-img h1 {
+  font-size: 3em;
+  margin: 0.5em 0 0.5em 0;
+  font-weight: bold;
+}
+
 @media (max-width: 1000px) {
   .section-styling {
     padding: 1.2em;
