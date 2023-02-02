@@ -6,27 +6,25 @@ layout: "base-copy.njk"
   {% include "./_includes/components/header.njk" %}
 
   <center>
-    <h1 class="font-bold text-3xl uppercase">Explore Without</h1>
+    <h1 class="relative font-bold text-3xl uppercase z-20">Explore Without</h1>
+    <h1 class="relative font-bold text-3xl uppercase z-20" style="color: #008080">Boundaries</h1>
+    <img id='rocketimg1' src="./assets/rocketHero.svg" alt="Rocket" class="relative mx-auto w-1/4 -inset-y-96 z-10"/>
   </center>
 </div>
 
-<img src="./assets/rocketHero.svg" alt="Rocket" class="mx-auto w-1/4" />
-<h1 class="font-bold text-3xl uppercase" style="color: #008080">Boundaries</h1>
-
 <center>
-  <div class="flex rounded-md stone-man-section">
+  <div class="relative flex rounded-md stone-man-section -inset-y-64">
     <p class="text-white font-sans">
       Ever since the stone age, we were on a developmental stage to evolve and
       continue to improve our way of life. Thanks to our technology, we can make
       traveling to the deep space possible and accomplish that goal of
       evolution.
     </p>
-
     <img id="stone-man" src="/assets/StoneMan.gif" />
   </div>
 </center>
 
-<h2 class="font-bold uppercase index-why text-center">
+<h2 class="relative font-bold uppercase index-why text-center h-10 -inset-y-20">
   AND THAT'S WHY WE MADE F3
 </h2>
 
@@ -65,3 +63,9 @@ layout: "base-copy.njk"
     </a>
   </div>
 </div>
+
+<script>
+
+  document.getElementById('body')
+
+</script>

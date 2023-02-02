@@ -72,6 +72,348 @@ body {
   }
 }
 
+#flipText {
+  text-align: center;
+  width: 700px;
+  height: 700px;
+  background-repeat: no-repeat;
+}
+
+$btn-col: #0434da;
+$theme-col: #fc1367; /* color de la linea central y puntos */
+$theme-grey: #6f6e76;
+$reg-grey: #888888;
+$dark-grey: #333333; /* color de la linea */
+$links-col: #7a7a7a;
+$light-col: #ffffff; /* color de los títulos */
+
+$section-margin: 152px;
+$section-padding: 86px;
+$title-margin: 60px;
+
+$dot-size: 30px;
+
+//$large-title: 50px;
+$large-title: 3.6em;
+$main-title: 2.86em;
+$reg-title: 2.15em;
+$sub-title: 1.43em;
+$txt-size: 1.28em;
+
+@mixin bg-cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin abs-elem-after {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+  }
+}
+
+@mixin abs-elem-before {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+  }
+}
+
+@mixin abs-vert-align {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin abs-hor-align {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin abs-align {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roadmap {
+  margin-bottom: 110px;
+
+  .rcontainer {
+    overflow: hidden;
+    padding-top: 40px;
+  }
+
+  &-item {
+    .list-title {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      width: 100%;
+      padding-bottom: 18px;
+      font-size: $sub-title;
+      font-weight: 600;
+      border-bottom: 2px solid $dark-grey;
+      color: $light-col;
+    }
+
+    &.executed {
+      .list-title {
+        color: $theme-col;
+      }
+
+      li {
+        background: linear-gradient(45deg, #00c280 23%, #01a094 33%, #0434da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  &-list {
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: $reg-grey;
+    padding-left: 0;
+
+    li {
+      @include abs-elem-before;
+
+      padding: 0;
+      list-style: none;
+      text-align: left;
+
+      &:before {
+        width: 30px;
+        height: 100%;
+        left: 0;
+        //background: url(../images/roadmap-list-point.png) no-repeat left 11px;
+        z-index: 200;
+      }
+    }
+  }
+
+  &-wrapper {
+    @include abs-elem-after;
+    @include abs-elem-before;
+
+    display: flex;
+    flex-direction: column;
+
+    &:after,
+    &:before {
+      @include abs-hor-align;
+
+      top: 0;
+      height: 100%;
+      width: 2px;
+      z-index: 1;
+    }
+
+    &:after {
+      background-color: $theme-col;
+    }
+
+    &:before {
+      background-color: $theme-col;
+      left: calc(50% - 1px);
+    }
+  }
+
+  &-item-wrap {
+    @include clearfix;
+
+    position: relative;
+    z-index: 10;
+
+    .roadmap-item {
+      @include abs-elem-before;
+      &:before {
+        @include bg-cover;
+        position: absolute;
+        display: inline-block;
+        line-height: 40px;
+        margin-top: -15px;
+        z-index: 2;
+        color: $theme-col;
+        content: " \25CF";
+        font-size: $dot-size;
+      }
+    }
+
+    &.right {
+      .roadmap-item {
+        padding-left: 70px;
+        float: right;
+
+        &:before {
+          right: 100%;
+          transform: translateX(50%);
+        }
+      }
+
+      .list-title {
+        padding-left: 70px;
+        left: auto;
+        right: 0;
+      }
+    }
+
+    &.left {
+      .roadmap-item {
+        padding-right: 70px;
+
+        &:before {
+          left: 100%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  &-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .roadmap-list {
+    font-size: 14px;
+  }
+
+  .token-sale-items-wrapper {
+    left: 40px;
+  }
+
+  .roadmap-item-wrap.left .roadmap-item,
+  .roadmap-item-wrap.right .roadmap-item {
+    padding-right: 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  .roadmap {
+    &-wrapper {
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+    &-item {
+      width: 100%;
+
+      .list-title {
+        position: relative;
+        top: 0;
+      }
+    }
+
+    &-item-wrap {
+      margin-bottom: 25px;
+
+      .list-title {
+        padding-left: 25px !important;
+      }
+
+      .roadmap-item {
+        padding: 0 5px 0 0 !important;
+
+        &.right:before,
+        &.left:before {
+          width: $dot-size;
+          height: $dot-size;
+          margin-left: 0;
+          bottom: 0;
+          top: $sub-title;
+          margin-top: 0;
+          left: 0;
+          right: 100%;
+          line-height: 0;
+          transform: translateX(0px) translateY(0%);
+        }
+      }
+    }
+
+    &-list {
+      padding: 14px 0 0 25px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .roadmap {
+    margin-bottom: 25px;
+    .section-title {
+      margin-bottom: 25px;
+    }
+    &-item {
+      &-wrap {
+        margin-bottom: 21px;
+      }
+      .list-title {
+        font-size: 14px;
+        padding-bottom: 12px;
+      }
+    }
+
+    &-list {
+      font-size: 12px;
+      padding-top: 10px;
+
+      li {
+        padding-left: 18px;
+
+        &:before {
+          background: url(/assets/img/home/roadmap-list-point.png) no-repeat
+            left 7px;
+          background-size: 4px;
+        }
+      }
+    }
+  }
+}
+
+.roadmap-item-wrap {
+  .roadmap-item:before {
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    left: -4px !important;
+  }
+
+  &.left .roadmap-item:before {
+    right: -6px;
+  }
+
+  &.right .roadmap-item:before {
+    left: -6px;
+  }
+}
+
 .about-sec-head {
   font-size: 4em;
   margin: 0.5em 0 0.5em 0;
@@ -154,6 +496,130 @@ body {
 .index-why {
   font-size: 5em;
   margin: 1.5em 0 1.5em 0;
+}
+
+.about-cont {
+  h1 {
+    font-size: 3em;
+    margin: 0.5em 0 0.5em 0;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1.5em;
+    margin: 0.5em 0 0.5em 0;
+  }
+  ul {
+    list-style: none;
+    margin-top: 0.5em;
+    li {
+      font-size: 1.7em;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+.about-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.648), rgba(0, 0, 0, 0.648)),
+    url("https://images.unsplash.com/photo-1586999082731-574a06ec7e25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
+  background-position: center center;
+  background-size: cover;
+  height: 70vh;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 3em;
+    margin: 0.5em 0 0.5em 0;
+    font-weight: bold;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+.rocket-container-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Kanit", sans-serif;
+  .r-left {
+    width: 50%;
+    padding: 1em;
+    h3 {
+      font-size: 3.5em;
+      margin-bottom: 0.15em;
+      font-weight: bolder;
+    }
+    h4 {
+      font-size: 2.8em;
+      margin-bottom: 0.15em;
+      font-weight: bolder;
+    }
+    p {
+      font-size: 1.5em;
+      margin-bottom: 0.25em;
+    }
+    ul {
+      list-style: none;
+      margin-top: 0.5em;
+      li {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+  .r-right {
+    width: 50%;
+    padding: 1em;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.rocket-container-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Kanit", sans-serif;
+  .r-left {
+    width: 50%;
+    padding: 1em;
+    h3 {
+      font-size: 3.5em;
+      margin-bottom: 0.15em;
+      font-weight: bolder;
+    }
+    h4 {
+      font-size: 2.8em;
+      margin-bottom: 0.15em;
+      font-weight: bolder;
+    }
+    p {
+      font-size: 1.5em;
+      margin-bottom: 0.25em;
+    }
+    ul {
+      list-style: none;
+      margin-top: 0.5em;
+      li {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+  .r-right {
+    width: 40%;
+    padding: 1em;
+    img {
+      width: 100%;
+    }
+  }
 }
 
 @media (max-width: 1000px) {
