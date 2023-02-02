@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -414,6 +415,86 @@ body {
   font-size: 3em;
   margin: 0.5em 0 0.5em 0;
   font-weight: bold;
+}
+
+.rocket-container-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Kanit", sans-serif;
+}
+.rocket-container-left .r-left {
+  width: 50%;
+  padding: 1em;
+}
+.rocket-container-left .r-left h3 {
+  font-size: 3.5em;
+  margin-bottom: 0.15em;
+  font-weight: bolder;
+}
+.rocket-container-left .r-left h4 {
+  font-size: 2.8em;
+  margin-bottom: 0.15em;
+  font-weight: bolder;
+}
+.rocket-container-left .r-left p {
+  font-size: 1.5em;
+  margin-bottom: 0.25em;
+}
+.rocket-container-left .r-left ul {
+  list-style: none;
+  margin-top: 0.5em;
+}
+.rocket-container-left .r-left ul li {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+.rocket-container-left .r-right {
+  width: 50%;
+  padding: 1em;
+}
+.rocket-container-left .r-right img {
+  width: 100%;
+}
+
+.rocket-container-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Kanit", sans-serif;
+}
+.rocket-container-right .r-left {
+  width: 50%;
+  padding: 1em;
+}
+.rocket-container-right .r-left h3 {
+  font-size: 3.5em;
+  margin-bottom: 0.15em;
+  font-weight: bolder;
+}
+.rocket-container-right .r-left h4 {
+  font-size: 2.8em;
+  margin-bottom: 0.15em;
+  font-weight: bolder;
+}
+.rocket-container-right .r-left p {
+  font-size: 1.5em;
+  margin-bottom: 0.25em;
+}
+.rocket-container-right .r-left ul {
+  list-style: none;
+  margin-top: 0.5em;
+}
+.rocket-container-right .r-left ul li {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+.rocket-container-right .r-right {
+  width: 40%;
+  padding: 1em;
+}
+.rocket-container-right .r-right img {
+  width: 100%;
 }
 
 @media (max-width: 1000px) {
