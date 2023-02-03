@@ -345,7 +345,7 @@ body {
   font-size: 1.5em;
   margin-bottom: 0.5em;
 }
-#f3-benefits ul li:nth-child(4) {
+#f3-benefits ul li:last-child {
   font-size: 1.3em;
   margin-left: 1.2em;
 }
@@ -384,7 +384,7 @@ body {
   font-weight: bold;
 }
 .about-cont p {
-  font-size: 1.5em;
+  font-size: 1.6em;
   margin: 0.5em 0 0.5em 0;
 }
 .about-cont ul {
@@ -394,6 +394,12 @@ body {
 .about-cont ul li {
   font-size: 1.7em;
   margin-bottom: 0.5em;
+}
+.about-cont h4 {
+  font-size: 2.7em;
+  margin: 0.5em 0 0.5em 0;
+  font-weight: bold;
+  margin-top: 1em;
 }
 
 .about-img {
@@ -415,6 +421,9 @@ body {
   font-size: 3em;
   margin: 0.5em 0 0.5em 0;
   font-weight: bold;
+}
+.about-img button {
+  font-size: 1.5em;
 }
 
 .rocket-container-left {
