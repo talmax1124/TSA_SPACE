@@ -766,3 +766,19 @@ $txt-size: 1.28em;
     }
   }
 }
+
+.animate-up {
+  animation-name: animate-up;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function:ease-out;
+}
+
+@keyframes animate-up {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

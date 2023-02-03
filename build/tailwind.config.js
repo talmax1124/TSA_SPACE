@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    screens: {
+      'sm': {'min': '340px', 'max': '767px'},
+
+      'xl': {'min': '768px', 'max': '1536px'}
+    }
   },
   variants: {
     extend: {},
