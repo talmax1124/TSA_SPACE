@@ -2,6 +2,15 @@
 layout: "base-copy.njk"
 ---
 
+<script>
+  fetch("https://api.spacexdata.com/v4/launches?limit=100")
+    .then((response) => response.json())
+    .then((data) => {
+      const launches = data.length;
+      document.getElementById("launches").innerHTML = launches;
+    });
+</script>
+
 <div class="hero flex flex-col">
   {% include "./_includes/components/header.njk" %}
 
@@ -14,10 +23,10 @@ layout: "base-copy.njk"
 <center>
   <div class="relative flex rounded-md stone-man-section -inset-y-64">
     <p class="text-white font-sans">
-      Ever since the Stone Age, we have been in a developmental stage trying to evolve and
-      continue improving our way of life. Thanks to advancements in technology, we can make
-      traveling to the deepest reaches of space possible and accomplish humankind's goal of
-      evolving past our current limitations.
+      Ever since the Stone Age, we have been in a developmental stage trying to
+      evolve and continue improving our way of life. Thanks to advancements in
+      technology, we can make traveling to the deepest reaches of space possible
+      and accomplish humankind's goal of evolving past our current limitations.
     </p>
     <img id="stone-man" src="/assets/StoneMan.gif" />
   </div>
@@ -33,7 +42,9 @@ layout: "base-copy.njk"
   </div>
   <div class="mr-auto block">
     <h3 class="font-bold">Benefits of F3</h3>
+
     <ul>
+      <li>Launched so far: <span id="launches"></span></li>
       <li>- Cost Effective & Durable</li>
       <li>- Reusable</li>
       <li>- Uses less fuel than current industry rockets</li>
@@ -64,7 +75,5 @@ layout: "base-copy.njk"
 </div>
 
 <script>
-
-  document.getElementById('body')
-
+  document.getElementById("body");
 </script>
