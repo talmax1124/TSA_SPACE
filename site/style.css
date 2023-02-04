@@ -1128,4 +1128,34 @@ Ensure the default browser behavior of the `hidden` attribute.
     top: -2em;
     bottom: -2em;
   }
+
+  .xl\:-inset-y-\[25em\] {
+    top: -25em;
+    bottom: -25em;
+  }
+
+  .xl\:-inset-y-\[5em\] {
+    top: -5em;
+    bottom: -5em;
+  }
+
+  .xl\:-inset-y-\[7em\] {
+    top: -7em;
+    bottom: -7em;
+  }
+
+  .xl\:-inset-y-\[7\.5em\] {
+    top: -7.5em;
+    bottom: -7.5em;
+  }
+
+  .xl\:-inset-y-\[7\.65em\] {
+    top: -7.65em;
+    bottom: -7.65em;
+  }
+
+  .xl\:-inset-y-\[7\.7em\] {
+    top: -7.7em;
+    bottom: -7.7em;
+  }
 }
