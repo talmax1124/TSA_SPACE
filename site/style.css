@@ -609,10 +609,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
-.h-5 {
-  height: 1.25rem;
-}
-
 .h-10 {
   height: 2.5rem;
 }
@@ -1015,36 +1011,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
-  .sm\:-inset-y-\[20em\] {
-    top: -20em;
-    bottom: -20em;
-  }
-
-  .sm\:-inset-y-\[70em\] {
-    top: -70em;
-    bottom: -70em;
-  }
-
-  .sm\:-inset-y-\[0em\] {
-    top: -0em;
-    bottom: -0em;
-  }
-
-  .sm\:-inset-y-\[25em\] {
-    top: -25em;
-    bottom: -25em;
-  }
-
-  .sm\:-inset-y-\[30em\] {
-    top: -30em;
-    bottom: -30em;
-  }
-
-  .sm\:-inset-y-\[50em\] {
-    top: -50em;
-    bottom: -50em;
-  }
-
   .sm\:-inset-y-10 {
     top: -2.5rem;
     bottom: -2.5rem;
@@ -1099,61 +1065,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1280px) {
-  .xl\:-inset-y-\[26em\] {
-    top: -26em;
-    bottom: -26em;
-  }
-
-  .xl\:-inset-y-\[4em\] {
-    top: -4em;
-    bottom: -4em;
-  }
-
-  .xl\:-inset-y-\[24em\] {
-    top: -24em;
-    bottom: -24em;
-  }
-
-  .xl\:-inset-y-\[35em\] {
-    top: -35em;
-    bottom: -35em;
-  }
-
-  .xl\:-inset-y-\[50em\] {
-    top: -50em;
-    bottom: -50em;
-  }
-
-  .xl\:-inset-y-\[2em\] {
-    top: -2em;
-    bottom: -2em;
-  }
-
-  .xl\:-inset-y-\[25em\] {
-    top: -25em;
-    bottom: -25em;
-  }
-
-  .xl\:-inset-y-\[5em\] {
-    top: -5em;
-    bottom: -5em;
-  }
-
-  .xl\:-inset-y-\[7em\] {
-    top: -7em;
-    bottom: -7em;
-  }
-
-  .xl\:-inset-y-\[7\.5em\] {
-    top: -7.5em;
-    bottom: -7.5em;
-  }
-
-  .xl\:-inset-y-\[7\.65em\] {
-    top: -7.65em;
-    bottom: -7.65em;
-  }
-
   .xl\:-inset-y-\[7\.7em\] {
     top: -7.7em;
     bottom: -7.7em;
