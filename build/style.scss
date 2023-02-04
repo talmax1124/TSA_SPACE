@@ -12,7 +12,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -69,6 +68,24 @@ body {
     font-size: 6em;
     margin-bottom: 2em;
     margin-top: 1em;
+  }
+  img {
+    width: 15%;
+  }
+}
+
+.hero-index {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://res.cloudinary.com/cduoshop/image/upload/v1673276687/back_ce1epr.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  h1 {
+    font-size: 6em;
+    margin-top: 1em;
+  }
+  img {
+    width: 15%;
   }
 }
 
@@ -637,12 +654,146 @@ $txt-size: 1.28em;
     margin-top: 0.8em;
     margin-bottom: 0.8em;
   }
+
+  .about-img {
+    background-position: center center;
+    background-size: cover;
+    height: 70vh;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 2.3em;
+      margin: 0.5em 0 0.5em 0;
+      font-weight: bold;
+    }
+    button {
+      font-size: 1.5em;
+    }
+  }
+
   .hero {
     background-size: cover;
     background-position: center center;
     h1 {
       font-size: 2.6em;
       font-kerning: 1em;
+    }
+
+    img {
+      top: -12em;
+      width: 40%;
+      margin-bottom: 1em;
+    }
+  }
+
+  .rocket-container-left {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Kanit", sans-serif;
+    .r-left {
+      width: 100%;
+      padding: 1em;
+      h3 {
+        font-size: 3.5em;
+        margin-bottom: 0.15em;
+        font-weight: bolder;
+      }
+      h4 {
+        font-size: 2.8em;
+        margin-bottom: 0.15em;
+        font-weight: bolder;
+      }
+      p {
+        font-size: 1.5em;
+        margin-bottom: 0.25em;
+      }
+      ul {
+        list-style: none;
+        margin-top: 0.5em;
+        li {
+          font-size: 1.5em;
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+    .r-right {
+      width: 100%;
+      padding: 1em;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .rocket-container-right {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Kanit", sans-serif;
+    .r-left {
+      width: 100%;
+      padding: 1em;
+      h3 {
+        font-size: 3.5em;
+        margin-bottom: 0.15em;
+        font-weight: bolder;
+      }
+      h4 {
+        font-size: 2.8em;
+        margin-bottom: 0.15em;
+        font-weight: bolder;
+      }
+      p {
+        font-size: 1.5em;
+        margin-bottom: 0.25em;
+      }
+      ul {
+        list-style: none;
+        margin-top: 0.5em;
+        li {
+          font-size: 1.5em;
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+    .r-right {
+      width: 40%;
+      padding: 1em;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .hero-index {
+    background-size: cover;
+    background-position: center center;
+    h1 {
+      font-size: 4.3em;
+      font-kerning: 1.5em;
+      line-height: 1em;
+    }
+
+    h1:nth-child(2) {
+      font-size: 3.7em;
+      font-kerning: 2em;
+      line-height: 1em;
+    }
+
+    img {
+      top: -8.3em;
+      width: 40%;
+      margin-bottom: 0.25em;
     }
   }
 
@@ -732,7 +883,7 @@ $txt-size: 1.28em;
       border-radius: 20px 20px 20px 20px;
 
       img {
-        width: 100%;
+        width: 80%;
         margin-left: 1em;
         justify-content: left;
       }
@@ -762,6 +913,12 @@ $txt-size: 1.28em;
   }
 }
 
+.tsadocx {
+  a:hover {
+    color: #f3b700;
+  }
+}
+
 @media (min-width: 1001px) {
   .header {
     #nav-mobile {
@@ -780,7 +937,7 @@ $txt-size: 1.28em;
   animation-name: animate-up;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
-  animation-timing-function:ease-out;
+  animation-timing-function: ease-out;
 }
 
 @keyframes animate-up {

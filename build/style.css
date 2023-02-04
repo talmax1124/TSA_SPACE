@@ -14,7 +14,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -71,6 +70,23 @@ body {
   font-size: 6em;
   margin-bottom: 2em;
   margin-top: 1em;
+}
+.hero img {
+  width: 15%;
+}
+
+.hero-index {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/cduoshop/image/upload/v1673276687/back_ce1epr.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero-index h1 {
+  font-size: 6em;
+  margin-top: 1em;
+}
+.hero-index img {
+  width: 15%;
 }
 
 #flipText {
@@ -512,6 +528,28 @@ body {
     margin-top: 0.8em;
     margin-bottom: 0.8em;
   }
+  .about-img {
+    background-position: center center;
+    background-size: cover;
+    height: 70vh;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-img h1 {
+    font-size: 2.3em;
+    margin: 0.5em 0 0.5em 0;
+    font-weight: bold;
+  }
+  .about-img button {
+    font-size: 1.5em;
+  }
   .hero {
     background-size: cover;
     background-position: center center;
@@ -519,6 +557,110 @@ body {
   .hero h1 {
     font-size: 2.6em;
     font-kerning: 1em;
+  }
+  .hero img {
+    top: -12em;
+    width: 40%;
+    margin-bottom: 1em;
+  }
+  .rocket-container-left {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Kanit", sans-serif;
+  }
+  .rocket-container-left .r-left {
+    width: 100%;
+    padding: 1em;
+  }
+  .rocket-container-left .r-left h3 {
+    font-size: 3.5em;
+    margin-bottom: 0.15em;
+    font-weight: bolder;
+  }
+  .rocket-container-left .r-left h4 {
+    font-size: 2.8em;
+    margin-bottom: 0.15em;
+    font-weight: bolder;
+  }
+  .rocket-container-left .r-left p {
+    font-size: 1.5em;
+    margin-bottom: 0.25em;
+  }
+  .rocket-container-left .r-left ul {
+    list-style: none;
+    margin-top: 0.5em;
+  }
+  .rocket-container-left .r-left ul li {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  .rocket-container-left .r-right {
+    width: 100%;
+    padding: 1em;
+  }
+  .rocket-container-left .r-right img {
+    width: 100%;
+  }
+  .rocket-container-right {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Kanit", sans-serif;
+  }
+  .rocket-container-right .r-left {
+    width: 100%;
+    padding: 1em;
+  }
+  .rocket-container-right .r-left h3 {
+    font-size: 3.5em;
+    margin-bottom: 0.15em;
+    font-weight: bolder;
+  }
+  .rocket-container-right .r-left h4 {
+    font-size: 2.8em;
+    margin-bottom: 0.15em;
+    font-weight: bolder;
+  }
+  .rocket-container-right .r-left p {
+    font-size: 1.5em;
+    margin-bottom: 0.25em;
+  }
+  .rocket-container-right .r-left ul {
+    list-style: none;
+    margin-top: 0.5em;
+  }
+  .rocket-container-right .r-left ul li {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  .rocket-container-right .r-right {
+    width: 40%;
+    padding: 1em;
+  }
+  .rocket-container-right .r-right img {
+    width: 100%;
+  }
+  .hero-index {
+    background-size: cover;
+    background-position: center center;
+  }
+  .hero-index h1 {
+    font-size: 4.3em;
+    font-kerning: 1.5em;
+    line-height: 1em;
+  }
+  .hero-index h1:nth-child(2) {
+    font-size: 3.7em;
+    font-kerning: 2em;
+    line-height: 1em;
+  }
+  .hero-index img {
+    top: -8.3em;
+    width: 40%;
+    margin-bottom: 0.25em;
   }
   .stone-man-section {
     display: flex;
@@ -599,7 +741,7 @@ body {
     border-radius: 20px 20px 20px 20px;
   }
   #f3-benefits #rocket-background img {
-    width: 100%;
+    width: 80%;
     margin-left: 1em;
     justify-content: left;
   }
@@ -623,6 +765,10 @@ body {
     margin-bottom: 1em;
   }
 }
+.tsadocx a:hover {
+  color: #f3b700;
+}
+
 @media (min-width: 1001px) {
   .header #nav-mobile {
     display: none;
